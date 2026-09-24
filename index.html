@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Santana Medley CD Shop</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styleSaint.css">
+        <script src="jquery-3.7.1.js"></script>
+        <script src="scriptSaint.js" defer></script>
+        <link rel="icon" href="Saint.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="Saint.ico" type="image/x-icon">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Santana Medley CD Shop</h1>
+                <p class="subtitle">Добро пожаловать в 2012 год 💿</p>
+            </header>
+
+                <div class="shop-container">
+    <section class="catalog-section">
+        <h2>Представляем вашему вниманию °❀⋆.ೃ࿔*:･❀˖ °</h2>
+        <div id="products-container" class="products-grid">
+            
+            <div class="product-card" data-id="1"> <!-- fucking карточки господи боже -->
+                <div class="product-image-container">
+                    <div class="cd-square">
+                        <img src="media/1.png" alt="какое-то японское порево" class="cd-image">
+                    </div>
+                    <div class="cd-glow"></div>
+                </div>
+                
+                <div class="product-info">
+                    <h3 class="product-title">Какая-то древняя японская чушь. Возможно, Инуяша.</h3>
+                    <div class="product-details">
+                        <p class="product-price">199 руб.</p>
+                        <p class="product-stock">Осталось: <span class="stock-count">1</span> шт.</p>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn-add-to-cart" data-id="1">
+                            <span class="btn-icon">✾</span> В корзину
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity btn-minus" data-id="1">-</button>
+                            <span class="quantity-display" data-id="1">1</span>
+                            <button class="btn-quantity btn-plus" data-id="1">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-status" data-id="1"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="2"> <!-- это вторая -->
+                <div class="product-image-container">
+                    <div class="cd-square">
+                        <img src="media/2.png" alt="старая как мир игра" class="cd-image">
+                    </div>
+                    <div class="cd-glow"></div>
+                </div>
+                
+                <div class="product-info">
+                    <h3 class="product-title">Jet Set Radio!</h3>
+                    <div class="product-details">
+                        <p class="product-price">699 руб.</p>
+                        <p class="product-stock">Осталось: <span class="stock-count">5</span> шт.</p>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn-add-to-cart" data-id="2">
+                            <span class="btn-icon">✾</span> В корзину
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity btn-minus" data-id="2">-</button>
+                            <span class="quantity-display" data-id="2">1</span>
+                            <button class="btn-quantity btn-plus" data-id="2">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-status" data-id="2"></div>
+                </div>
+            </div>
+            
+            <div class="product-card" data-id="3"> <!-- это третья -->
+                <div class="product-image-container">
+                    <div class="cd-square">
+                        <img src="media/3.png" alt="еще одна старая как мир игра" class="cd-image">
+                    </div>
+                    <div class="cd-glow"></div>
+                </div>
+                
+                <div class="product-info">
+                    <h3 class="product-title">Sonic the Hedgehog</h3>
+                    <div class="product-details">
+                        <p class="product-price">799 руб.</p>
+                        <p class="product-stock">Осталось: <span class="stock-count">12</span> шт.</p>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn-add-to-cart" data-id="3">
+                            <span class="btn-icon">✾</span> В корзину
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity btn-minus" data-id="3">-</button>
+                            <span class="quantity-display" data-id="3">1</span>
+                            <button class="btn-quantity btn-plus" data-id="3">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-status" data-id="3"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="4"> <!-- это четвертая -->
+                <div class="product-image-container">
+                    <div class="cd-square">
+                        <img src="media/4.png" alt="я помню эти тесты на беоне..." class="cd-image">
+                    </div>
+                    <div class="cd-glow"></div>
+                </div>
+                
+                <div class="product-info">
+                    <h3 class="product-title">Katekyo Hitman Reborn!</h3>
+                    <div class="product-details">
+                        <p class="product-price">1599 руб.</p>
+                        <p class="product-stock">Осталось: <span class="stock-count">11</span> шт.</p>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn-add-to-cart" data-id="4">
+                            <span class="btn-icon">✾</span> В корзину
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity btn-minus" data-id="4">-</button>
+                            <span class="quantity-display" data-id="4">1</span>
+                            <button class="btn-quantity btn-plus" data-id="4">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-status" data-id="4"></div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="5"> <!-- это пятая -->
+                <div class="product-image-container">
+                    <div class="cd-square">
+                        <img src="media/5.png" alt="ШТЕЕЕЕЕЕЙН ☆*: .｡. o(≧▽≦)o .｡.:*☆..." class="cd-image">
+                    </div>
+                    <div class="cd-glow"></div>
+                </div>
+                
+                <div class="product-info">
+                    <h3 class="product-title">Soul Eater</h3>
+                    <div class="product-details">
+                        <p class="product-price">1999 руб.</p>
+                        <p class="product-stock">Осталось: <span class="stock-count">20</span> шт.</p>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn-add-to-cart" data-id="5">
+                            <span class="btn-icon">✾</span> В корзину
+                        </button>
+                        <div class="quantity-controls">
+                            <button class="btn-quantity btn-minus" data-id="5">-</button>
+                            <span class="quantity-display" data-id="5">1</span>
+                            <button class="btn-quantity btn-plus" data-id="5">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-status" data-id="5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <aside class="cart-section"> <!-- fucking корзина -->
+        <h2>*࿔ೃ. Ваша корзина .ೃ࿔*</h2>
+        <div id="cart-container">
+            <p class="empty-cart-message">Хм... Корзина пуста. Вперед за покупками!</p>
+        </div>
+        <div class="cart-summary" id="cart-summary">
+            <div class="cart-total">
+                <p>Итого: <b>0.00 руб.</b></p>
+            </div>
+            <div class="cart-buttons">
+                <button class="btn-clear-cart" id="btn-clear-cart">Очистить корзину</button>
+                <button class="btn-checkout" id="btn-checkout">Оформить заказ</button>
+            </div>
+        </div>
+    </aside>
+</div>
+            <footer>
+                © 2012 Ни одно из прав не защищено. <br>
+                убей будду
+            </footer>
+        </div>
+    </body>
+</html>

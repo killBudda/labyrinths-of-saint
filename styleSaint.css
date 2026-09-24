@@ -1,0 +1,421 @@
+@font-face {
+    font-family: 'Freeride';
+    src: url('Freeride.otf') format('opentype'); }
+
+body {
+        background-image: url("media/bg.jpg");
+        background-size: cover; 
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        font-family: 'Freeride', cursive, sans-serif !important;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px;
+        color: #460000;  }
+
+header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 30px;
+        border-radius: 20px; }
+
+.container { /* у меня их так много, 
+            что я уже не помню какой за что отвечает */
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px; }
+
+.subtitle {
+    color: #460000c1; }
+
+.shop-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
+        margin-bottom: 40px; }
+
+.catalog-section {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1); }
+
+.catalog-section h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #460000;
+        display: flex;
+        align-items: center;
+        gap: 10px; }
+
+.product-card { /* это проклятые карточки товаров... */
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
+        padding: 25px;
+        display: flex;
+        gap: 25px;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+        position: relative;
+        overflow: hidden; }
+
+.product-card:hover {
+        background: rgba(100, 55, 55, 0.3);
+        border: 2px solid rgba(100, 43, 43, 0.134); }
+
+
+.product-image-container {
+        position: relative;
+        flex-shrink: 0; }
+
+.cd-square {
+        width: 180px;
+        height: 180px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(1px); /* это вот чтобы было мутненько но не слишком мутненько.
+            как моя жизнь */ }
+
+.cd-image {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)); }
+
+.product-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px; }
+
+.product-title {
+        font-size: 1.4rem;
+        color: #460000;
+        line-height: 1.4;
+        margin-bottom: 5px; }
+
+.product-details {
+        display: flex;
+        flex-direction: column;
+        gap: 8px; }
+
+.product-price {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #460000;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+
+.product-stock {
+        font-size: 0.9rem;
+        opacity: 0.8; }
+
+.stock-count {
+        color:#46000078;;
+        font-weight: bold; }
+
+/* это кнопки, хотя не все */
+.product-actions {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-top: 10px; }
+
+.btn-add-to-cart {
+        font-family: 'Freeride';
+        font-weight: 800;
+        font-size: 1rem;
+        background: rgba(100, 55, 55, 0.3);
+        color: #460000;
+        border: 2px solid rgba(86, 47, 47, 0.315);
+        padding: 12px 25px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px; }
+
+.btn-add-to-cart:hover {
+        box-shadow: 0 5px 15px rgba(177, 124, 124, 0.4); }
+
+.btn-icon {
+        font-size: 1.2rem; }
+
+.quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 8px 15px;
+        border-radius: 8px; }
+
+.btn-quantity {
+        background: rgba(255, 255, 255, 0.2);
+        color: #46000078;
+        border: none;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease; }
+
+.btn-quantity:hover {
+        background: rgba(255, 255, 255, 0.3); }
+
+.quantity-display {
+        font-size: 1.2rem;
+        font-weight: bold;
+        min-width: 30px;
+        text-align: center; }
+
+.cart-status {
+        margin-top: 10px; }
+
+.in-cart-badge {
+        background: rgba(255, 255, 255, 0.3);
+        color: #460000;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        border: 1px solid rgba(100, 43, 43, 0.134); }
+
+/* Секция корзины */
+.cart-section {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        height: fit-content;
+        position: sticky;
+        top: 20px; }
+
+.cart-section h2 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: #460000;
+        display: flex;
+        align-items: center;
+        gap: 10px; }
+
+#cart-container {
+        min-height: 200px;
+        margin-bottom: 25px; }
+
+.empty-cart-message {
+        text-align: center;
+        padding: 40px 20px;
+        opacity: 0.7;
+        font-size: 1.1rem; }
+
+/* Элемент корзины */
+.cart-item {
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px; }
+
+.cart-item-info {
+        flex: 1; }
+
+.cart-item-info h4 {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        color: #46000078; }
+
+.cart-item-info p {
+        font-size: 0.9rem;
+        opacity: 0.8; }
+
+.cart-item-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px; }
+
+.btn-cart-add, .btn-cart-remove, .btn-cart-delete {
+        background: rgba(255, 255, 255, 0.1);
+        font-weight: bold;
+        font-size: larger;
+        color: #460000;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+
+.btn-cart-add:hover {
+        background: rgba(34, 90, 86, 0.3); }
+
+.btn-cart-remove:hover {
+        background: rgba(94, 39, 39, 0.3); }
+
+.btn-cart-delete:hover {
+        background: rgba(94, 39, 39, 0.3); }
+
+.cart-quantity {
+        font-weight: bold;
+        min-width: 30px;
+        text-align: center; }
+
+.cart-item-total {
+        font-weight: bold;
+        color: #460000;
+        font-size: 1.1rem;
+        min-width: 100px;
+        text-align: right; }
+
+/* это итоги корзины */
+.cart-summary { /* контейнер в котором хранится итоговая цена 
+            и кол-во товаров */
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        margin-top: 20px; }
+
+.cart-total { /* контейнер в котором хранится сами надписи 
+            "Товаров" и "Итого" */
+        margin-bottom: 20px; }
+
+.cart-total p { /* сами надписи */
+        font-size: 1.2rem;
+        margin-bottom: 10px; }
+
+.cart-total b { /* сама надпись, но жирная */
+        color: #46000078;
+        font-size: 1.4rem; }
+
+.cart-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; }
+
+.btn-clear-cart, .btn-checkout {
+        padding: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease; }
+
+.btn-clear-cart { /* кнопка "Очистить корзину" */
+        font-family: 'Freeride';
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.3);
+        color: #460000;
+        border: 2px solid rgba(100, 43, 43, 0.134); }
+
+.btn-clear-cart:hover { /* меняет цвет при наведении */
+        background: rgba(100, 55, 55, 0.3); }
+
+.products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px; }
+
+.btn-checkout { /* кнопка "Оформить заказ" */
+        font-family: 'Freeride';
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.3);
+        color: #460000;
+        border: 2px solid rgba(100, 43, 43, 0.134); }
+
+.btn-checkout:hover { /* это она меняет цвет при наведении */
+        background: rgba(100, 55, 55, 0.3); }
+
+/* это уведомления */
+.notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-weight: bold;
+        z-index: 1000;
+        max-width: 350px;
+        display: none;
+        animation: slideIn 0.3s ease; }
+
+.notification-success { /* уведомление при добавлении товара в корзину,
+            и при увеличении кол-ва товара в самой корзине */
+        background: rgba(34, 90, 86, 0.3);
+        color: rgb(17, 43, 42);
+        border: 2px solid rgba(30, 77, 74, 0.39); }
+
+.notification-error { /* это когда кол-во товара в корзине превышает 
+            10 шт, либо когда я наезжаю с фразой 
+            "Ты собрался скупить весь мой магазин?" */
+        background: rgba(160, 137, 68, 0.445);
+        border: 2px solid rgba(125, 106, 53, 0.445); }
+
+.notification-info { /* приветственное уведомление, 
+            уведомление при оформлении заказа, 
+            при поштучном и полном удалении товара из корзины */
+        background: #46000070;
+        color: rgb(62, 28, 28);
+        border: 2px solid rgba(77, 33, 33, 0.349); }
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0; }
+    to {
+        transform: translateX(0);
+        opacity: 1; } }
+
+footer {
+        text-align: center;
+        font-weight: bold;
+        color: #460000;
+        padding: 20px;
+        margin-top: 40px;
+        opacity: 0.7;
+        font-size: 1rem; }
+
+@media (max-width: 1200px) { /* это он мне две колонки в одну делает, 
+            когда я у меня половина монитора занята кодом, а другая 
+            окном браузера */
+    .shop-container {
+        grid-template-columns: 1fr; }
+    
+    .cart-section {
+        position: static; } }
+
+@media (max-width: 768px) { /* а это когда сайт смотрят с мобилки,
+            но я не тестила, не знаю работает или нет */
+    .products-grid {
+        grid-template-columns: 1fr; }
+    
+    .product-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center; }
+    
+    .cd-square {
+        width: 150px;
+        height: 150px; }
+    
+    .cd-image {
+        width: 120px;
+        height: 120px;}
+    
+    h1 {
+        font-size: 2.5rem; } }

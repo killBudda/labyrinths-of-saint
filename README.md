@@ -7,7 +7,7 @@
 ## 🌐 Demo
 
 **GitHub Pages:**  
-https://killbudda.github.io/labyrinths-of-Santana-Medley/
+[https://killbudda.github.io/labyrinths-of-saint/]
 
 ## 🛠 Technologies
 
